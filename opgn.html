@@ -1,1 +1,16 @@
-<embed src="https://lixinde.github.io/opgn.mp3" autostart="true" loop="true" hidden="true"></embed>
+ <script
+// js控制方法
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+}</script>
+
+// audio控件代码
+<audio id="Jaudio" class="media-audio" src="http://lixinde.github.io/opgn.mp3" preload loop="loop"></audio >
+
+<script
+audioAutoPlay('Jaudio');
+</script>
